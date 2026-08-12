@@ -58,7 +58,7 @@ h1 strong { font-weight:700; }
 .section-heading span { color:var(--gray); font-family:"IBM Plex Mono",monospace; font-size:12px; }
 .section-heading h2, .subsection-heading h2 { margin:0; font-size:35px; line-height:1.15; letter-spacing:-.035em; }
 .research-intro { margin-left:60px; max-width:760px; font-size:17px; line-height:1.65; }
-.interest-grid { display:grid; grid-template-columns:repeat(4,1fr); margin:46px 0 0 60px; border-top:1px solid var(--research-line); border-bottom:1px solid var(--research-line); }
+.interest-grid { display:grid; grid-template-columns:repeat(4,1fr); margin:46px 0 0 60px; border-top:1px solid var(--research-line); }
 .interest-grid article { min-height:220px; padding:24px 20px; border-right:1px solid var(--research-line); }
 .interest-grid article:first-child { padding-left:0; }
 .interest-grid article:last-child { border-right:0; }
@@ -209,7 +209,7 @@ footer p { margin:0; text-align:right; }
   .page-hero h1 { font-size:28px; }
   .page-lead { font-size:17px; }
   .vision-sequence { gap:8px; }
-  .vision-sequence i { display:none; }
+  .vision-sequence i { display:inline; flex:0 0 auto; font-size:12px; }
   .vision-article { margin-top:48px; font-size:17px; }
   .vision-callout { margin:44px 0; padding:25px; font-size:18px; }
   .symbol-section { grid-template-columns:1fr; margin-top:68px; padding:35px 25px; }
