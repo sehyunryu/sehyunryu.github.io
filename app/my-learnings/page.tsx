@@ -14,7 +14,7 @@ function LearningList({ items, columns = false }: { items: string[]; columns?: b
 export default function MyLearnings() {
   return (
     <>
-      <SiteHeader />
+      <SiteHeader activePage="my-learnings" />
       <main className="page-main learnings-page">
         <header className="page-hero">
           <p className="eyebrow">My Learnings</p>

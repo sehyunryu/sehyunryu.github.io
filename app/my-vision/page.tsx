@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function MyVision() {
   return (
     <>
-      <SiteHeader />
+      <SiteHeader activePage="my-vision" />
       <main className="page-main">
         <header className="page-hero vision-hero">
           <p className="eyebrow">My Vision</p>

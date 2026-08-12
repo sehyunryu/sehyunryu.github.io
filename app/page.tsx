@@ -87,7 +87,7 @@ function Timeline({ items }: { items: typeof timeline }) {
 export default function Home() {
   return (
     <>
-      <SiteHeader />
+      <SiteHeader activePage="about" />
 
       <main>
         <section className="hero" id="about">

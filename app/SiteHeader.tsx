@@ -1,13 +1,24 @@
-export function SiteHeader() {
-  const navigation = (
-    <>
-      <a href="/">about</a>
-      <a href="/#publications">publications</a>
-      <a href="/#experience">experiences</a>
-      <a href="/my-vision">my vision</a>
-      <a href="/my-learnings">my learnings</a>
-    </>
-  );
+type ActivePage = "about" | "my-vision" | "my-learnings";
+
+const navItems = [
+  { key: "about", label: "about", href: "/" },
+  { key: "publications", label: "publications", href: "/#publications" },
+  { key: "experience", label: "experiences", href: "/#experience" },
+  { key: "my-vision", label: "my vision", href: "/my-vision" },
+  { key: "my-learnings", label: "my learnings", href: "/my-learnings" },
+] as const;
+
+export function SiteHeader({ activePage = "about" }: { activePage?: ActivePage }) {
+  const navigation = navItems.map((item) => (
+    <a
+      className={`nav-link nav-${item.key}${activePage === item.key ? " is-active" : ""}`}
+      href={item.href}
+      key={item.key}
+      aria-current={activePage === item.key ? "page" : undefined}
+    >
+      {item.label}
+    </a>
+  ));
 
   return (
     <header className="site-header">
