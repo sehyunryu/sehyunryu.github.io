@@ -7,14 +7,17 @@ export const metadata: Metadata = {
   description: "Courses, teaching, books, and places that have shaped Sehyun Ryu’s learning journey.",
 };
 
-function LearningList({ items, columns = false, institutionBadges = false }: { items: string[]; columns?: boolean; institutionBadges?: boolean }) {
+function LearningList({ items, columns = false, institutionBadges = false, authorBylines = false }: { items: string[]; columns?: boolean; institutionBadges?: boolean; authorBylines?: boolean }) {
   return (
     <ul className={`learning-list${columns ? " learning-columns" : ""}`}>
       {items.map((item) => {
         const separator = institutionBadges ? item.lastIndexOf(" - ") : -1;
-        const title = separator >= 0 ? item.slice(0, separator) : item;
+        const rawTitle = separator >= 0 ? item.slice(0, separator) : item;
         const institution = separator >= 0 ? item.slice(separator + 3) : null;
-        return <li key={item}>{title}{institution && <> <span className="institution-badge">{institution}</span></>}</li>;
+        const authorStart = authorBylines && rawTitle.endsWith(")") ? rawTitle.lastIndexOf(" (") : -1;
+        const title = authorStart >= 0 ? rawTitle.slice(0, authorStart) : rawTitle;
+        const author = authorStart >= 0 ? rawTitle.slice(authorStart + 2, -1) : null;
+        return <li key={item}>{title}{author && <span className="book-author">{author}</span>}{institution && <> <span className="institution-badge">{institution}</span></>}</li>;
       })}
     </ul>
   );
@@ -57,12 +60,12 @@ export default function MyLearnings() {
 
         <section className="learning-section">
           <div className="learning-heading"><span>02</span><div><h2>Books: Liberal Arts</h2><p>{data.liberalArts.length} books across philosophy, society, psychology, economics, and literature</p></div></div>
-          <LearningList items={data.liberalArts} columns />
+          <LearningList items={data.liberalArts} columns authorBylines />
         </section>
 
         <section className="learning-section">
           <div className="learning-heading"><span>03</span><div><h2>Books: Science &amp; Technology</h2><p>{data.scienceTechnology.length} books on physics, computing, biology, networks, and engineering</p></div></div>
-          <LearningList items={data.scienceTechnology} columns />
+          <LearningList items={data.scienceTechnology} columns authorBylines />
         </section>
 
         <section className="learning-section countries-section">
