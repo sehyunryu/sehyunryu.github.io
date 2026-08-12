@@ -24,7 +24,8 @@ export function SiteHeader({ activePage = "about" }: { activePage?: ActivePage }
     <header className="site-header">
       <nav className="nav-shell" aria-label="Primary navigation">
         <a className="brand" href="/">
-          <strong>Sehyun Ryu</strong><span> | Wireless for Scalable Intelligence</span>
+          <img className="brand-sunflower" src="/skyblue-sunflower.png" alt="" width="507" height="492" />
+          <span className="brand-wordmark"><strong>Sehyun Ryu</strong><span className="brand-tagline"> | Wireless for Scalable Intelligence</span></span>
         </a>
         <div className="nav-links">{navigation}</div>
         <details className="mobile-nav">
