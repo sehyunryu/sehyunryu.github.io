@@ -105,7 +105,9 @@ function Timeline({ items }: { items: typeof timeline }) {
             <strong>{item.institution}</strong>
             <span className="timeline-location"><img src="/location.svg" alt="" />{item.location}</span>
           </p>
-          <p>{item.detail}</p>
+          <p className="timeline-detail">
+            {item.detail.split(" · ").map((line) => <span key={line}>{line}</span>)}
+          </p>
         </div>
       </div>
     </article>
