@@ -32,7 +32,7 @@ const publications = [
     items: [
       <><strong>[C3]</strong> Sehyun Ryu and Hyun Jong Yang*, “Blockage-Aware Multi-RIS Sensing and Optimization for mmWave Smart Radio Environments,” <em className="venue-mark conference-mark">IEEE GLOBECOM</em>, Macau, China, accepted, 2026.</>,
       <><strong>[C2]</strong> Jaehyun Choi, Sehyun Ryu, Seungmin Choi, and Hyun Jong Yang*, <a href="https://ieeexplore.ieee.org/document/11263604">“RT-AUGGAN: Robust Fingerprint Positioning under Environmental Variations via Ray Tracing-Assisted GAN Augmentation,”</a> <em className="venue-mark conference-mark">IEEE ICCE-Asia</em>, Busan, Republic of Korea, 2025.</>,
-      <><strong>[C1]</strong> Sehyun Ryu, Hosung Joo, Jonggyu Jang, and Hyun Jong Yang*, <a href="https://ojs.aaai.org/index.php/AAAI/article/view/30506">“Instance-Wise Laplace Mechanism via Deep Reinforcement Learning,”</a> <em className="venue-mark aaai-mark">AAAI Conference on Artificial Intelligence</em>, Vancouver, Canada, 2024, 38(21), pp. 23640–23641. <span className="award">Oral presentation</span></>,
+      <><strong>[C1]</strong> Sehyun Ryu, Hosung Joo, Jonggyu Jang, and Hyun Jong Yang*, <a href="https://ojs.aaai.org/index.php/AAAI/article/view/30506">“Instance-Wise Laplace Mechanism via Deep Reinforcement Learning,”</a> <em className="venue-mark aaai-mark">AAAI Conference on Artificial Intelligence (Student Abstract and Poster Program)</em>, Vancouver, Canada, 2024, 38(21), pp. 23640–23641. <span className="award">Oral presentation</span></>,
     ],
     tags: [[2], [1, 2, 3], [4]],
   },
@@ -278,7 +278,7 @@ export default function Home() {
               <div className="activity-subsection"><h4>Technical Program Committee</h4><ul><li><em>IEEE Consumer Communications &amp; Networking Conference (CCNC)</em><span className="activity-year">2027</span></li><li><em>KICS International Conference on ICT Convergence (ICTC)</em><span className="activity-year">2025</span></li></ul></div>
               <div className="activity-subsection"><h4>Conference Assistant</h4><ul><li><em>IEEE/IEIE International Conference on Consumer Electronics Asia (ICCE-Asia)</em><span className="activity-year">2025</span></li></ul></div>
             </article>
-            <article><h3>Teaching Assistant</h3><ul><li><em>EECE490W: Introduction to Reinforcement Learning, POSTECH (Spring 2023).</em></li><li><em>EECE695V: Introduction to AI for Graduate School Students, POSTECH (Fall 2023).</em></li></ul></article>
+            <article><h3>Teaching Assistant</h3><ul><li><em>EECE490W: Introduction to Reinforcement Learning, POSTECH</em><span className="activity-year">Spring 2023</span></li><li><em>EECE695V: Introduction to AI for Graduate School Students, POSTECH</em><span className="activity-year">Fall 2023</span></li></ul></article>
           </div>
 
           <div className="subsection-heading"><h2>Honors &amp; Awards</h2></div>
