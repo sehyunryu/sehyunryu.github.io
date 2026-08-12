@@ -101,7 +101,7 @@ export default function Home() {
             <div className="contact-row" aria-label="Contact links">
               <a href="mailto:sh.ryu@postech.ac.kr" aria-label="Email" title="Email"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/envelope.svg" alt="" /></a>
               <a href="https://www.linkedin.com/in/sehyun-ryu-57b640172/" aria-label="LinkedIn" title="LinkedIn"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/linkedin.svg" alt="" /></a>
-              <a href="https://www.overleaf.com/read/cgzkyxxqjdnm#5d2d80" aria-label="CV" title="CV"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/file-earmark-text.svg" alt="" /></a>
+              <a className="contact-cv" href="https://www.overleaf.com/read/cgzkyxxqjdnm#5d2d80" aria-label="CV" title="CV">CV</a>
               <a href="https://github.com/RyuSearch" aria-label="GitHub" title="GitHub"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/github.svg" alt="" /></a>
             </div>
           </div>
@@ -117,9 +117,9 @@ export default function Home() {
             <p>My research focuses on system-level design of wireless communication under practical constraints such as latency, limited observability, and signaling overhead, with selective use of machine learning where it is effective.</p>
           </div>
           <div className="interest-grid">
-            <article><span>01</span><h3>AI-native RAN</h3><p>Channel representation and generation for AI-native radio access networks.</p></article>
-            <article><span>02</span><h3>Adaptive systems</h3><p>Wireless system optimization in high-mobility and dynamically varying channels.</p></article>
-            <article><span>03</span><h3>CSI intelligence</h3><p>Channel state information prediction, feedback, and compression.</p></article>
+            <article><span>01</span><h3>AI-Native RAN</h3><p>Channel representation and generation for AI-native radio access networks.</p></article>
+            <article><span>02</span><h3>Adaptive Wireless Systems</h3><p>Wireless system optimization in high-mobility and dynamically varying channels.</p></article>
+            <article><span>03</span><h3>CSI Representation</h3><p>Channel state information prediction, feedback, and compression.</p></article>
             <article><span>04</span><h3>Physical AI</h3><p>Communication infrastructure for scalable machine intelligence and cloud robotics.</p></article>
           </div>
         </section>

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
-:root { --paper:#ffffff; --ink:#111111; --muted:#242424; --line:#dceef6; --gray:#7a7a7a; --gray-line:#d8d8d8; --box-gray:#f7f7f7; --accent:#5a2d26; --accent-hover:#3f1f1a; --sky:#87cbe8; --sky-soft:#f0f9fd; --card:#ffffff; --max:1080px; }
+:root { --paper:#ffffff; --ink:#111111; --muted:#242424; --line:#dceef6; --gray:#7a7a7a; --gray-line:#d8d8d8; --research-line:#e7e7e7; --box-gray:#f7f7f7; --accent:#5a2d26; --accent-hover:#3f1f1a; --sky:#87cbe8; --sky-soft:#f0f9fd; --card:#ffffff; --max:1080px; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; scroll-padding-top:92px; }
 body { margin:0; color:var(--ink); background:var(--paper); font-family:"DM Sans", Arial, sans-serif; font-size:16px; line-height:1.65; }
@@ -47,6 +47,7 @@ h1 strong { font-weight:700; }
 .contact-row a { display:inline-flex; width:23px; height:23px; align-items:center; justify-content:center; color:var(--ink); text-decoration:none; opacity:.72; transition:opacity .18s ease,transform .18s ease; }
 .contact-row a:hover { color:var(--ink); opacity:1; transform:translateY(-2px); }
 .contact-row img { display:block; width:21px; height:21px; }
+.contact-row .contact-cv { width:auto; font-size:14px; font-weight:700; letter-spacing:-.02em; }
 .profile-card { margin:0; position:sticky; top:98px; }
 .profile-card img { display:block; width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; object-position:center 20%; border-radius:4px; filter:saturate(.88); box-shadow:10px 10px 0 #dff3fb; }
 .profile-card figcaption { margin-top:18px; text-align:center; color:var(--muted); font-family:"IBM Plex Mono",monospace; font-size:11px; }
@@ -56,8 +57,8 @@ h1 strong { font-weight:700; }
 .section-heading span { color:var(--gray); font-family:"IBM Plex Mono",monospace; font-size:12px; }
 .section-heading h2, .subsection-heading h2 { margin:0; font-size:35px; line-height:1.15; letter-spacing:-.035em; }
 .research-intro { margin-left:60px; max-width:760px; font-size:20px; line-height:1.5; }
-.interest-grid { display:grid; grid-template-columns:repeat(4,1fr); margin:46px 0 0 60px; border-top:1px solid var(--gray-line); border-bottom:1px solid var(--gray-line); }
-.interest-grid article { min-height:220px; padding:24px 20px; border-right:1px solid var(--gray-line); }
+.interest-grid { display:grid; grid-template-columns:repeat(4,1fr); margin:46px 0 0 60px; border-top:1px solid var(--research-line); border-bottom:1px solid var(--research-line); }
+.interest-grid article { min-height:220px; padding:24px 20px; border-right:1px solid var(--research-line); }
 .interest-grid article:first-child { padding-left:0; }
 .interest-grid article:last-child { border-right:0; }
 .interest-grid span { color:var(--gray); font-family:"IBM Plex Mono",monospace; font-size:11px; }
@@ -138,7 +139,7 @@ footer p { margin:0; text-align:right; }
   .hero { grid-template-columns:1fr 190px; gap:36px; }
   .interest-grid { grid-template-columns:repeat(2,1fr); }
   .interest-grid article:nth-child(2) { border-right:0; }
-  .interest-grid article:nth-child(-n+2) { border-bottom:1px solid var(--gray-line); }
+  .interest-grid article:nth-child(-n+2) { border-bottom:1px solid var(--research-line); }
   .activity-grid { grid-template-columns:1fr; }
   .symbol-section { grid-template-columns:180px 1fr; padding:42px; gap:40px; }
   .sunflower-image { width:160px; margin:auto; }
@@ -161,7 +162,7 @@ footer p { margin:0; text-align:right; }
   .research-intro, .interest-grid, .section-note, .publication-group, .timeline, .subsection-heading, .activity-grid, .plain-list { margin-left:40px; }
   .research-intro { font-size:17px; }
   .interest-grid { grid-template-columns:1fr; }
-  .interest-grid article { min-height:auto; padding:20px 0; border-right:0; border-bottom:1px solid var(--gray-line); }
+  .interest-grid article { min-height:auto; padding:20px 0; border-right:0; border-bottom:1px solid var(--research-line); }
   .interest-grid article:last-child { border-bottom:0; }
   .interest-grid h3 { margin-top:18px; }
   .publication-group { grid-template-columns:1fr; gap:16px; }
