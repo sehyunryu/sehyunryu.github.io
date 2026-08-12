@@ -1,11 +1,11 @@
 type ActivePage = "about" | "my-vision" | "my-learnings";
 
 const navItems = [
-  { key: "about", label: "about", href: "/" },
-  { key: "publications", label: "publications", href: "/#publications" },
-  { key: "experience", label: "experiences", href: "/#experience" },
-  { key: "my-vision", label: "my vision", href: "/my-vision" },
-  { key: "my-learnings", label: "my learnings", href: "/my-learnings" },
+  { key: "about", label: "About", href: "/" },
+  { key: "publications", label: "Publications", href: "/#publications" },
+  { key: "experience", label: "Experiences", href: "/#experience" },
+  { key: "my-vision", label: "My Vision", href: "/my-vision" },
+  { key: "my-learnings", label: "My Learnings", href: "/my-learnings" },
 ] as const;
 
 export function SiteHeader({ activePage = "about" }: { activePage?: ActivePage }) {
