@@ -6,7 +6,11 @@ export const metadata: Metadata = {
   title: "Sehyun Ryu — Wireless Communications & Machine Intelligence",
   description: "Sehyun Ryu is a systems engineer researching AI-native wireless systems, adaptive communication, machine intelligence, and physical AI.",
   keywords: ["Sehyun Ryu", "wireless communications", "machine intelligence", "AI-native RAN", "physical AI", "cloud robotics"],
-  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
+  icons: {
+    icon: [{ url: "/skyblue-sunflower.png", type: "image/png" }],
+    shortcut: "/skyblue-sunflower.png",
+    apple: "/skyblue-sunflower.png",
+  },
   openGraph: {
     title: "Sehyun Ryu — Wireless Communications & Machine Intelligence",
     description: "Communication as infrastructure for scalable machine intelligence.",

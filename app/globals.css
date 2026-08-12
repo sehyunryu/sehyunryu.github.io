@@ -36,16 +36,17 @@ main { max-width:var(--max); margin:auto; padding:0 26px 80px; }
 h1 { margin:0; font-size:clamp(44px,7vw,72px); line-height:1; letter-spacing:-.055em; font-weight:400; }
 h1, h2 { color:var(--accent); }
 h1 strong { font-weight:700; }
-.hero h1 { max-width:700px; font-size:clamp(34px,4.8vw,48px); font-weight:700; }
+.hero h1 { max-width:700px; margin-bottom:30px; font-size:clamp(34px,4.8vw,48px); font-weight:700; }
 .subtitle { margin:18px 0 34px; color:var(--muted); font-size:20px; }
 .bio { max-width:700px; font-size:17px; }
 .bio p { margin:0 0 17px; }
 .university-postech { color:#c13b32; }
 .university-snu { color:#1c3f8c; }
 .university-stanford { color:#8c1515; }
-.contact-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; }
-.contact-row a { border:1px solid var(--sky); border-radius:99px; padding:7px 15px; color:var(--ink); background:var(--sky-soft); text-decoration:none; font-family:"IBM Plex Mono",monospace; font-size:12px; transition:.18s ease; }
-.contact-row a:hover { color:var(--ink); background:#dff3fb; border-color:var(--sky); transform:translateY(-1px); }
+.contact-row { display:flex; flex-wrap:wrap; align-items:center; gap:18px; margin-top:26px; }
+.contact-row a { display:inline-flex; width:23px; height:23px; align-items:center; justify-content:center; color:var(--ink); text-decoration:none; opacity:.72; transition:opacity .18s ease,transform .18s ease; }
+.contact-row a:hover { color:var(--ink); opacity:1; transform:translateY(-2px); }
+.contact-row img { display:block; width:21px; height:21px; }
 .profile-card { margin:0; position:sticky; top:98px; }
 .profile-card img { display:block; width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; object-position:center 20%; border-radius:4px; filter:saturate(.88); box-shadow:10px 10px 0 #dff3fb; }
 .profile-card figcaption { margin-top:18px; text-align:center; color:var(--muted); font-family:"IBM Plex Mono",monospace; font-size:11px; }
