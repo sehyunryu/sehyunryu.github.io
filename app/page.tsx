@@ -1,3 +1,4 @@
+import React from "react";
 import { SiteHeader } from "./SiteHeader";
 
 const publications = [
@@ -69,10 +70,25 @@ function PublicationGroup({ title, items }: { title: string; items: React.ReactN
     <section className="publication-group">
       <h3>{title}</h3>
       <ol className="publication-list">
-        {items.map((item, index) => <li key={index}>{item}</li>)}
+        {items.map((item, index) => <li key={index}>{highlightSelfAuthor(item)}</li>)}
       </ol>
     </section>
   );
+}
+
+function highlightSelfAuthor(node: React.ReactNode): React.ReactNode {
+  if (typeof node === "string") {
+    return node.split("Sehyun Ryu").map((part, index, parts) => (
+      <React.Fragment key={`${part}-${index}`}>
+        {part}{index < parts.length - 1 && <b className="self-author">Sehyun Ryu</b>}
+      </React.Fragment>
+    ));
+  }
+  if (Array.isArray(node)) return node.map((child) => highlightSelfAuthor(child));
+  if (React.isValidElement<{ children?: React.ReactNode }>(node)) {
+    return React.cloneElement(node, undefined, highlightSelfAuthor(node.props.children));
+  }
+  return node;
 }
 
 function Timeline({ items }: { items: typeof timeline }) {
@@ -128,7 +144,7 @@ export default function Home() {
           <div className="section-heading"><span>02</span><h2>Publications</h2></div>
           <p className="section-note">(=) equal contribution · (*) corresponding author</p>
           {publications.map((group) => <PublicationGroup key={group.title} {...group} />)}
-          <section className="publication-group patents"><h3>Patents</h3><ol className="publication-list">{patents.map((patent, index) => <li key={index}>{patent}</li>)}</ol></section>
+          <section className="publication-group patents"><h3>Patents</h3><ol className="publication-list">{patents.map((patent, index) => <li key={index}>{highlightSelfAuthor(patent)}</li>)}</ol></section>
         </section>
 
         <section className="section" id="experience">
