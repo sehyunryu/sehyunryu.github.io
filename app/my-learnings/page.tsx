@@ -7,8 +7,17 @@ export const metadata: Metadata = {
   description: "Courses, teaching, books, and places that have shaped Sehyun Ryu’s learning journey.",
 };
 
-function LearningList({ items, columns = false }: { items: string[]; columns?: boolean }) {
-  return <ul className={`learning-list${columns ? " learning-columns" : ""}`}>{items.map((item) => <li key={item}>{item}</li>)}</ul>;
+function LearningList({ items, columns = false, institutionBadges = false }: { items: string[]; columns?: boolean; institutionBadges?: boolean }) {
+  return (
+    <ul className={`learning-list${columns ? " learning-columns" : ""}`}>
+      {items.map((item) => {
+        const separator = institutionBadges ? item.lastIndexOf(" - ") : -1;
+        const title = separator >= 0 ? item.slice(0, separator) : item;
+        const institution = separator >= 0 ? item.slice(separator + 3) : null;
+        return <li key={item}>{title}{institution && <> <span className="institution-badge">{institution}</span></>}</li>;
+      })}
+    </ul>
+  );
 }
 
 function CountryCard({ entry }: { entry: string }) {
@@ -40,9 +49,9 @@ export default function MyLearnings() {
         <section className="learning-section">
           <div className="learning-heading"><span>01</span><div><h2>STEM Courses</h2><p>{data.courses.Undergraduate.length + data.courses.Graduate.length} courses · {data.courses.TA.length} teaching assistantships</p></div></div>
           <div className="course-grid">
-            <article><h3>Undergraduate</h3><LearningList items={data.courses.Undergraduate} /></article>
-            <article><h3>Graduate</h3><LearningList items={data.courses.Graduate} /></article>
-            <article><h3>Teaching Assistant</h3><LearningList items={data.courses.TA} /></article>
+            <article><h3>Undergraduate</h3><LearningList items={data.courses.Undergraduate} institutionBadges /></article>
+            <article><h3>Graduate</h3><LearningList items={data.courses.Graduate} institutionBadges /></article>
+            <article><h3>Teaching Assistant</h3><LearningList items={data.courses.TA} institutionBadges /></article>
           </div>
         </section>
 
