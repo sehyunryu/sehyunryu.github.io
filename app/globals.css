@@ -114,10 +114,9 @@ footer p { margin:0; text-align:right; }
 .course-grid article:last-child { grid-column:1 / -1; }
 .course-grid h3 { margin:0 0 20px; color:var(--ink); font-family:"IBM Plex Mono",monospace; font-size:13px; text-transform:uppercase; letter-spacing:.06em; }
 .learning-list { list-style:none; margin:0; padding:0; }
-.learning-list li { position:relative; padding:8px 0 8px 19px; border-bottom:1px solid var(--line); color:var(--ink); font-size:14px; line-height:1.5; break-inside:avoid; }
+.learning-list li { position:relative; padding:8px 0 8px 19px; border-bottom:0; color:var(--ink); font-size:14px; line-height:1.5; break-inside:avoid; }
 .learning-list li::before { content:""; position:absolute; left:0; top:18px; width:5px; height:5px; border-radius:50%; background:var(--gray); }
 .learning-columns { columns:2; column-gap:55px; margin-left:54px; }
-.learning-columns li { border-bottom:0; }
 .country-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-left:54px; }
 .country-card { padding:18px 0; border-top:1px solid var(--gray-line); }
 .country-card strong { display:block; margin-bottom:12px; color:var(--ink); font-size:15px; }
