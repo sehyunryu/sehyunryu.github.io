@@ -70,10 +70,38 @@ function PublicationGroup({ title, items }: { title: string; items: React.ReactN
     <section className="publication-group">
       <h3>{title}</h3>
       <ol className="publication-list">
-        {items.map((item, index) => <li key={index}>{highlightSelfAuthor(item)}</li>)}
+        {items.map((item, index) => {
+          const href = findFirstPublicationHref(item);
+          const content = highlightSelfAuthor(unwrapPublicationLinks(item));
+          return <li key={index}>{href ? <a className="publication-entry-link" href={href}>{content}</a> : content}</li>;
+        })}
       </ol>
     </section>
   );
+}
+
+function findFirstPublicationHref(node: React.ReactNode): string | undefined {
+  if (Array.isArray(node)) {
+    for (const child of node) {
+      const href = findFirstPublicationHref(child);
+      if (href) return href;
+    }
+    return undefined;
+  }
+  if (React.isValidElement<{ children?: React.ReactNode; href?: string }>(node)) {
+    if (node.type === "a" && node.props.href) return node.props.href;
+    return findFirstPublicationHref(node.props.children);
+  }
+  return undefined;
+}
+
+function unwrapPublicationLinks(node: React.ReactNode): React.ReactNode {
+  if (Array.isArray(node)) return node.map((child) => unwrapPublicationLinks(child));
+  if (React.isValidElement<{ children?: React.ReactNode }>(node)) {
+    if (node.type === "a") return unwrapPublicationLinks(node.props.children);
+    return React.cloneElement(node, undefined, unwrapPublicationLinks(node.props.children));
+  }
+  return node;
 }
 
 function highlightSelfAuthor(node: React.ReactNode): React.ReactNode {
