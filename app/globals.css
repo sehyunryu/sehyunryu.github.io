@@ -74,18 +74,21 @@ h1 strong { font-weight:700; }
 .publication-list .self-author { font-weight:700; }
 .publication-list em { color:var(--ink); }
 .publication-list .venue-mark {
-  padding:0 .08em;
+  padding:.04em .12em;
   background-repeat:no-repeat;
-  background-size:100% 82%;
-  background-position:0 82%;
+  background-size:100% 100%;
+  background-position:center;
+  box-shadow:.07em 0 0 var(--marker-color),-.07em 0 0 var(--marker-color);
   -webkit-box-decoration-break:clone;
   box-decoration-break:clone;
 }
-.publication-list .journal-mark { background-image:linear-gradient(176deg,transparent 15%,#CC99FF 16% 82%,transparent 83%); }
-.publication-list .ai-ethics-mark { background-image:linear-gradient(176deg,transparent 15%,#CCFFCC 16% 82%,transparent 83%); }
-.publication-list .conference-mark { background-image:linear-gradient(176deg,transparent 15%,#CCCCFF 16% 82%,transparent 83%); }
-.publication-list .aaai-mark { background-image:linear-gradient(176deg,transparent 15%,#99CCFF 16% 82%,transparent 83%); }
-.publication-list .domestic-mark { background-image:linear-gradient(176deg,transparent 15%,#e5e5e5 16% 82%,transparent 83%); }
+.publication-list .venue-mark { background-image:linear-gradient(177deg,transparent 0 2%,var(--marker-color) 2.5% 97%,transparent 97.5% 100%); }
+.publication-list .arxiv-mark { --marker-color:#FFCCCC; }
+.publication-list .journal-mark { --marker-color:#CC99FF; }
+.publication-list .ai-ethics-mark { --marker-color:#CCFFCC; }
+.publication-list .conference-mark { --marker-color:#CCCCFF; }
+.publication-list .aaai-mark { --marker-color:#99CCFF; }
+.publication-list .domestic-mark { --marker-color:#e5e5e5; }
 .award, .patent-status { display:inline-block; margin-left:5px; padding:1px 7px; border-radius:99px; color:#5f5f5f; background:#ececec; font-size:11px; font-weight:600; }
 .timeline { margin-left:60px; }
 .timeline-item { display:grid; grid-template-columns:230px 1fr; gap:34px; padding:25px 0; border-top:1px solid var(--gray-line); }

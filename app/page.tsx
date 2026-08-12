@@ -5,12 +5,12 @@ const publications = [
   {
     title: "Preprints",
     items: [
-      <><strong>[P1]</strong> Sehyun Ryu, Yumin Kim, Minjae Lee, Hyun Jong Yang*, and John M. Cioffi*, <a href="https://arxiv.org/abs/2607.24872">“Beam-Response Contrastive Learning for Transmitter-Side MIMO CSI Representation,”</a> <em>arXiv</em>, 2026.</>,
+      <><strong>[P1]</strong> Sehyun Ryu, Yumin Kim, Minjae Lee, Hyun Jong Yang*, and John M. Cioffi*, <a href="https://arxiv.org/abs/2607.24872">“Beam-Response Contrastive Learning for Transmitter-Side MIMO CSI Representation,”</a> <em className="venue-mark arxiv-mark">arXiv</em>, 2026.</>,
       <><strong>[P2]</strong> Sehyun Ryu, Seungmin Choi, Hyun Jong Yang*, and John M. Cioffi*, <a href="https://arxiv.org/abs/2608.01713">“End-to-End Mobility-Aware Multi-RIS Optimization via Blockage Detection and Closed-Form Riemannian Updates,”</a> submitted to <em>IEEE Transactions on Wireless Communications</em>, 2026.</>,
       <><strong>[P3]</strong> Jeonghyun An(=), Sehyun Ryu(=), and Hyun Jong Yang*, “Contamination-Aware Task Allocation for Cell-Free Cloud-Robotic AMR Warehouses,” submitted to <em>IEEE Internet of Things Journal</em>, 2026.</>,
-      <><strong>[P4]</strong> Minwoo Kim, Hyeonsu Lyu, Sehyun Ryu, Sojeong Park, and Hyun Jong Yang*, “Temporal Channel Estimation for Generalized CSI Feedback,” <em>arXiv</em>, 2026.</>,
+      <><strong>[P4]</strong> Minwoo Kim, Hyeonsu Lyu, Sehyun Ryu, Sojeong Park, and Hyun Jong Yang*, “Temporal Channel Estimation for Generalized CSI Feedback,” <em className="venue-mark arxiv-mark">arXiv</em>, 2026.</>,
       <><strong>[P5]</strong> Hyeonsu Lyu, Minwoo Kim, Sehyun Ryu, and Hyun Jong Yang*, double-blinded, submitted to <em>IEEE INFOCOM</em>, 2026.</>,
-      <><strong>[P6]</strong> Hyeonsu Lyu, Jonggyu Jang, Sehyun Ryu, and Hyun Jong Yang*, <a href="https://arxiv.org/abs/2312.05586">“Deeper Understanding of Black-box Predictions via Generalized Influence Functions,”</a> <em>arXiv</em>, 2024.</>,
+      <><strong>[P6]</strong> Hyeonsu Lyu, Jonggyu Jang, Sehyun Ryu, and Hyun Jong Yang*, <a href="https://arxiv.org/abs/2312.05586">“Deeper Understanding of Black-box Predictions via Generalized Influence Functions,”</a> <em className="venue-mark arxiv-mark">arXiv</em>, 2024.</>,
     ],
   },
   {
