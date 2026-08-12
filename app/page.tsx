@@ -90,7 +90,7 @@ function PublicationGroup({ title, items, tags }: { title: string; items: React.
             <div className="publication-tags" aria-label="Research interest tags">
               {(tags[index] ?? []).map((tagId) => {
                 const tag = researchTagMeta[tagId];
-                return <span className={`research-tag ${tag.className}`} key={tagId}>{tag.label}</span>;
+                return <a className={`research-tag ${tag.className}`} href={`#research-papers-${tagId}`} key={tagId}>{tag.label}</a>;
               })}
             </div>
           </li>;
