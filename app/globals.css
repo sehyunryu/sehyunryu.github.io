@@ -69,7 +69,7 @@ h1 strong { font-weight:700; }
 .award { display:inline-block; margin-left:5px; padding:1px 7px; border-radius:99px; color:#825400; background:#fff0bf; font-size:11px; font-weight:600; }
 .timeline { margin-left:60px; }
 .timeline-item { display:grid; grid-template-columns:230px 1fr; gap:34px; padding:25px 0; border-top:1px solid var(--gray-line); }
-.timeline-period { color:var(--ink); font-family:"IBM Plex Mono",monospace; font-size:12px; }
+.timeline-period { color:var(--ink); font-family:"DM Sans",Arial,sans-serif; font-size:13px; }
 .timeline h3 { margin:-4px 0 3px; font-size:20px; }
 .timeline p { margin:2px 0; color:var(--muted); font-size:14px; }
 .timeline .timeline-place { color:var(--ink); font-weight:500; }
