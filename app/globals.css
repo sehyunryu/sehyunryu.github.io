@@ -43,6 +43,7 @@ h1 strong { font-weight:700; }
 .university-postech { color:#c13b32; }
 .university-snu { color:#1c3f8c; }
 .university-stanford { color:#8c1515; }
+.company-samsung { color:#192899; }
 .contact-row { display:flex; flex-wrap:wrap; align-items:center; gap:18px; margin-top:26px; }
 .contact-row a { display:inline-flex; width:23px; height:23px; align-items:center; justify-content:center; color:var(--ink); text-decoration:none; opacity:.72; transition:opacity .18s ease,transform .18s ease; }
 .contact-row a:hover { color:var(--ink); opacity:1; transform:translateY(-2px); }
