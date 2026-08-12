@@ -40,6 +40,9 @@ h1 strong { font-weight:700; }
 .subtitle { margin:18px 0 34px; color:var(--muted); font-size:20px; }
 .bio { max-width:700px; font-size:17px; }
 .bio p { margin:0 0 17px; }
+.university-postech { color:#c13b32; }
+.university-snu { color:#1c3f8c; }
+.university-stanford { color:#8c1515; }
 .contact-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; }
 .contact-row a { border:1px solid var(--sky); border-radius:99px; padding:7px 15px; color:var(--ink); background:var(--sky-soft); text-decoration:none; font-family:"IBM Plex Mono",monospace; font-size:12px; transition:.18s ease; }
 .contact-row a:hover { color:var(--ink); background:#dff3fb; border-color:var(--sky); transform:translateY(-1px); }
