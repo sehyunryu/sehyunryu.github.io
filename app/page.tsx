@@ -55,7 +55,7 @@ const patents = [
 ];
 
 const timeline = [
-  { period: "Starting Oct. 2026", role: "Visiting Student Researcher", institution: "Stanford University", location: "Stanford, CA, USA", logo: "/stanford-logo.png", logoClass: "stanford", detail: "Department of Electrical Engineering · Machine Learning and Communications Laboratory · Host: Prof. John M. Cioffi" },
+  { period: "Starting Oct. 2026", role: "Visiting Student Researcher", institution: "Stanford University", location: "Stanford, CA, USA", logo: "/stanford-logo.jpg", logoClass: "stanford", detail: "Department of Electrical Engineering · Machine Learning and Communications Laboratory · Host: Prof. John M. Cioffi" },
   { period: "Nov. 2025 — Present", role: "Industry-sponsored Ph.D. Researcher", institution: "Samsung Electronics", location: "Hwaseong, Republic of Korea", logo: "/samsung-logo.png", logoClass: "samsung", detail: "DS Division, System LSI Business, Modem Development Team · Post-graduation Employment Program" },
   { period: "Jan. 2025 — Present", role: "External Research Fellow", institution: "Seoul National University", location: "Seoul, Republic of Korea", logo: "/snu-logo.png", logoClass: "snu", detail: "Institute of New Media and Communications · Advanced Intelligent Systems Laboratory" },
 ];
@@ -96,16 +96,16 @@ function Timeline({ items }: { items: typeof timeline }) {
     <article className="timeline-item" key={`${item.role}-${item.period}`}>
       <div className="timeline-period">{item.period}</div>
       <div className="timeline-main">
+        <div className={`timeline-logo-frame ${item.logoClass}`}>
+          <img className="timeline-logo" src={item.logo} alt={`${item.institution} logo`} />
+        </div>
         <div className="timeline-copy">
           <h3>{item.role}</h3>
           <p className="timeline-place">
-            <span>{item.institution}</span>
+            <strong>{item.institution}</strong>
             <span className="timeline-location"><img src="/location.svg" alt="" />{item.location}</span>
           </p>
           <p>{item.detail}</p>
-        </div>
-        <div className={`timeline-logo-frame ${item.logoClass}`}>
-          <img className="timeline-logo" src={item.logo} alt={`${item.institution} logo`} />
         </div>
       </div>
     </article>
