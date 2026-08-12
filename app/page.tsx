@@ -144,7 +144,11 @@ export default function Home() {
           <div className="section-heading"><span>02</span><h2>Publications</h2></div>
           <p className="section-note">(=) equal contribution · (*) corresponding author</p>
           {publications.map((group) => <PublicationGroup key={group.title} {...group} />)}
-          <section className="publication-group patents"><h3>Patents</h3><ol className="publication-list">{patents.map((patent, index) => <li key={index}>{highlightSelfAuthor(patent)}</li>)}</ol></section>
+          <section className="publication-group patents"><h3>Patents</h3><ol className="publication-list">{patents.map((patent, index) => {
+            const isFiled = /\s*\(filed\)\.?$/.test(patent);
+            const patentText = isFiled ? patent.replace(/\s*\(filed\)\.?$/, ".") : patent;
+            return <li key={index}>{highlightSelfAuthor(patentText)} <span className="patent-status">{isFiled ? "filed" : "granted"}</span></li>;
+          })}</ol></section>
         </section>
 
         <section className="section" id="experience">
