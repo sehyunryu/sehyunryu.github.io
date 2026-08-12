@@ -11,6 +11,21 @@ function LearningList({ items, columns = false }: { items: string[]; columns?: b
   return <ul className={`learning-list${columns ? " learning-columns" : ""}`}>{items.map((item) => <li key={item}>{item}</li>)}</ul>;
 }
 
+function CountryCard({ entry }: { entry: string }) {
+  const match = entry.match(/^(.+?) \((.+)\)$/);
+  const country = match?.[1] ?? entry;
+  const cities = match?.[2].split(", ") ?? [];
+
+  return (
+    <article className="country-card">
+      <strong>{country}</strong>
+      <div className="country-cities">
+        {cities.map((city) => <span key={city}>{city}</span>)}
+      </div>
+    </article>
+  );
+}
+
 export default function MyLearnings() {
   return (
     <>
@@ -43,7 +58,7 @@ export default function MyLearnings() {
 
         <section className="learning-section countries-section">
           <div className="learning-heading"><span>04</span><div><h2>Visited Countries</h2><p>Places that expanded my view of the world</p></div></div>
-          <div className="country-grid">{data.visitedCountries.map((country) => <div key={country}>{country}</div>)}</div>
+          <div className="country-grid">{data.visitedCountries.map((country) => <CountryCard entry={country} key={country} />)}</div>
         </section>
       </main>
       <footer><div><strong>Sehyun Ryu</strong><span>Systems engineer for scalable machine intelligence.</span></div><p>© 2026 Sehyun Ryu · Hosted on GitHub Pages</p></footer>
