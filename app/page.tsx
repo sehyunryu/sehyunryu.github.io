@@ -117,10 +117,10 @@ export default function Home() {
             <p>My research focuses on system-level design of wireless communication under practical constraints such as latency, limited observability, and signaling overhead, with selective use of machine learning where it is effective.</p>
           </div>
           <div className="interest-grid">
-            <article><span>01</span><h3>AI-Native RAN</h3><p>Channel representation and generation for AI-native radio access networks.</p></article>
-            <article><span>02</span><h3>Adaptive Wireless Systems</h3><p>Wireless system optimization in high-mobility and dynamically varying channels.</p></article>
-            <article><span>03</span><h3>CSI Representation</h3><p>Channel state information prediction, feedback, and compression.</p></article>
-            <article><span>04</span><h3>Physical AI</h3><p>Communication infrastructure for scalable machine intelligence and cloud robotics.</p></article>
+            <article><span>01</span><h3>AI-Native RAN</h3><p>Learned channel representations and generative channel modeling for AI-native radio access networks.</p></article>
+            <article><span>02</span><h3>Adaptive Wireless Systems</h3><p>Adaptive optimization of wireless systems under high mobility and dynamically varying channel conditions.</p></article>
+            <article><span>03</span><h3>CSI Representation</h3><p>Learned CSI representation, prediction, compression, and feedback for efficient channel acquisition.</p></article>
+            <article><span>04</span><h3>Physical AI</h3><p>Wireless communication infrastructure for scalable physical AI and cloud-edge robotics.</p></article>
           </div>
         </section>
 
