@@ -73,12 +73,14 @@ h1 strong { font-weight:700; }
 .timeline h3 { margin:-4px 0 3px; font-size:20px; }
 .timeline p { margin:2px 0; color:var(--muted); font-size:14px; }
 .timeline .timeline-place { color:var(--ink); font-weight:500; }
-.subsection-heading { margin:70px 0 24px 60px; }
+.subsection-heading { margin:70px 0 24px 60px; padding-top:34px; border-top:1px solid var(--line); }
 .activity-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-left:60px; }
 .activity-grid article { padding:25px; background:var(--box-gray); border:1px solid var(--gray-line); border-radius:4px; }
 .activity-grid h3 { margin:0 0 18px; font-size:17px; }
 .activity-grid ul, .plain-list { margin:0; padding-left:18px; }
 .activity-grid li { margin:0 0 9px; color:var(--muted); font-size:13px; line-height:1.45; }
+.activity-year { color:#8a8a8a; white-space:nowrap; }
+.activity-year::before { content:" | "; color:#b8b8b8; }
 .plain-list { margin-left:60px; max-width:830px; }
 .plain-list li { margin-bottom:15px; padding-left:7px; }
 footer { max-width:var(--max); margin:auto; padding:40px 26px 55px; display:flex; justify-content:space-between; gap:28px; color:var(--muted); font-size:12px; }

@@ -142,9 +142,9 @@ export default function Home() {
         <section className="section" id="activities">
           <div className="section-heading"><span>04</span><h2>Academic Activities</h2></div>
           <div className="activity-grid">
-            <article><h3>Journal reviewer</h3><ul><li>IEEE Transactions on Wireless Communications</li><li>IEEE Transactions on Communications</li><li>IEEE Transactions on Vehicular Technology</li><li>IEEE Transactions on Information Forensics &amp; Security</li><li>IEEE Wireless Communications Letters</li><li>The Journal of Supercomputing</li><li>J-KICS</li><li>Frontiers in Psychology</li></ul></article>
-            <article><h3>Conference service</h3><ul><li>Reviewer, IEEE CCNC (2024, 2025)</li><li>TPC, IEEE CCNC (2027)</li><li>TPC, KICS ICTC (2025)</li><li>Conference Assistant, IEEE/IEIE ICCE-Asia (2025)</li></ul></article>
-            <article><h3>Teaching assistant</h3><ul><li>EECE490W: Introduction to Reinforcement Learning, POSTECH (Spring 2023)</li><li>EECE695V: Introduction to AI for Graduate School Students, POSTECH (Fall 2023)</li></ul></article>
+            <article><h3>Journal Reviewer</h3><ul><li>IEEE Transactions on Wireless Communications</li><li>IEEE Transactions on Communications</li><li>IEEE Transactions on Vehicular Technology</li><li>IEEE Transactions on Information Forensics &amp; Security</li><li>IEEE Wireless Communications Letters</li><li>The Journal of Supercomputing</li><li>J-KICS</li><li>Frontiers in Psychology</li></ul></article>
+            <article><h3>Conference Service</h3><ul><li>Reviewer, IEEE CCNC <span className="activity-year">2024, 2025</span></li><li>TPC, IEEE CCNC <span className="activity-year">2027</span></li><li>TPC, KICS ICTC <span className="activity-year">2025</span></li><li>Conference Assistant, IEEE/IEIE ICCE-Asia <span className="activity-year">2025</span></li></ul></article>
+            <article><h3>Teaching Assistant</h3><ul><li>EECE490W: Introduction to Reinforcement Learning, POSTECH (Spring 2023)</li><li>EECE695V: Introduction to AI for Graduate School Students, POSTECH (Fall 2023)</li></ul></article>
           </div>
 
           <div className="subsection-heading"><h2>Honors &amp; Awards</h2></div>
