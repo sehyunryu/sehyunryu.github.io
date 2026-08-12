@@ -12,7 +12,7 @@ const publications = [
       <><strong>[P5]</strong> Hyeonsu Lyu, Minwoo Kim, Sehyun Ryu, and Hyun Jong Yang*, double-blinded, submitted to <em>IEEE INFOCOM</em>, 2026.</>,
       <><strong>[P6]</strong> Hyeonsu Lyu, Jonggyu Jang, Sehyun Ryu, and Hyun Jong Yang*, <a href="https://arxiv.org/abs/2312.05586">“Deeper Understanding of Black-box Predictions via Generalized Influence Functions,”</a> <em className="venue-mark arxiv-mark">arXiv</em>, 2024.</>,
     ],
-    tags: [[1, 3], [2], [4], [3], [3], [1]],
+    tags: [[1, 3], [2], [2, 3], [1, 4], [1, 2, 4], [4]],
   },
   {
     title: "International Journals",
@@ -25,7 +25,7 @@ const publications = [
       <><strong>[J2]</strong> Seungmin Choi(=), Hosung Joo(=), Sehyun Ryu, Tommaso Melodia, and Hyun Jong Yang*, <a href="https://ieeexplore.ieee.org/document/11215681">“Performance-Guaranteed CSI Feedback via Model-Free Incremental Residual Compression Framework,”</a> <em className="venue-mark journal-mark">IEEE Wireless Communications Letters</em>, vol. 15, pp. 880–884, 2025.</>,
       <><strong>[J1]</strong> Sehyun Ryu(=), Jonggyu Jang(=), and Hyun Jong Yang*, <a href="https://ieeexplore.ieee.org/document/10609362?source=authoralert">“Noise Variance Optimization in Differential Privacy: A Game-Theoretic Approach Through Per-Instance Differential Privacy,”</a> <em className="venue-mark journal-mark">IEEE Access</em>, vol. 12, pp. 103104–103118, 2024.</>,
     ],
-    tags: [[3], [2, 3], [4], [2, 3], [4], [3], [1]],
+    tags: [[1, 3], [2, 3], [1, 4], [1, 2, 3], [4], [1, 3], [4]],
   },
   {
     title: "International Conference Proceedings",
@@ -34,7 +34,7 @@ const publications = [
       <><strong>[C2]</strong> Jaehyun Choi, Sehyun Ryu, Seungmin Choi, and Hyun Jong Yang*, <a href="https://ieeexplore.ieee.org/document/11263604">“RT-AUGGAN: Robust Fingerprint Positioning under Environmental Variations via Ray Tracing-Assisted GAN Augmentation,”</a> <em className="venue-mark conference-mark">IEEE ICCE-Asia</em>, Busan, Republic of Korea, 2025.</>,
       <><strong>[C1]</strong> Sehyun Ryu, Hosung Joo, Jonggyu Jang, and Hyun Jong Yang*, <a href="https://ojs.aaai.org/index.php/AAAI/article/view/30506">“Instance-Wise Laplace Mechanism via Deep Reinforcement Learning,”</a> <em className="venue-mark aaai-mark">AAAI Conference on Artificial Intelligence</em>, Vancouver, Canada, 2024, 38(21), pp. 23640–23641. <span className="award">Oral presentation</span></>,
     ],
-    tags: [[2], [2], [1]],
+    tags: [[2], [1, 2, 3], [4]],
   },
   {
     title: "Korean Domestic Papers",
@@ -46,7 +46,7 @@ const publications = [
       <><strong>[D2]</strong> Sehyun Ryu and Hyun Jong Yang*, “Research Trends of Deep Learning-Based Algorithms for Reduced CSI Feedback Overhead,” <em className="venue-mark domestic-mark">JCCI</em>, Busan, Republic of Korea, 2024.</>,
       <><strong>[D1]</strong> Sehyun Ryu and Hyun Jong Yang*, “Additive Machine Unlearning Algorithm Using Orthogonality,” <em className="venue-mark domestic-mark">Summer Conference of KICS</em>, Jeju Island, Republic of Korea, 2023.</>,
     ],
-    tags: [[4], [4], [1, 4], [1], [3], [1]],
+    tags: [[1, 2, 4], [1, 4], [1, 4], [1, 3], [1, 3], [4]],
   },
 ];
 
@@ -83,8 +83,9 @@ function PublicationGroup({ title, items, tags }: { title: string; items: React.
       <ol className="publication-list">
         {items.map((item, index) => {
           const href = findFirstPublicationHref(item);
+          const publicationId = findPublicationId(item);
           const content = highlightSelfAuthor(unwrapPublicationLinks(item));
-          return <li key={index}>
+          return <li id={publicationId ? `publication-${publicationId}` : undefined} key={index}>
             {href ? <a className="publication-entry-link" href={href}>{content}</a> : content}
             <div className="publication-tags" aria-label="Research interest tags">
               {(tags[index] ?? []).map((tagId) => {
@@ -121,6 +122,54 @@ function unwrapPublicationLinks(node: React.ReactNode): React.ReactNode {
     return React.cloneElement(node, undefined, unwrapPublicationLinks(node.props.children));
   }
   return node;
+}
+
+function nodeText(node: React.ReactNode): string {
+  if (typeof node === "string" || typeof node === "number") return String(node);
+  if (Array.isArray(node)) return node.map(nodeText).join("");
+  if (React.isValidElement<{ children?: React.ReactNode }>(node)) return nodeText(node.props.children);
+  return "";
+}
+
+function findPublicationId(node: React.ReactNode): string | undefined {
+  return nodeText(node).match(/^\[([PJCD]\d+)\]/)?.[1];
+}
+
+function relatedPublications(tagId: number) {
+  return publications.flatMap((group) => group.items.flatMap((item, index) => {
+    if (!group.tags[index]?.includes(tagId)) return [];
+    const id = findPublicationId(item) ?? `${group.title}-${index + 1}`;
+    return [{ id, item, href: findFirstPublicationHref(item) ?? `#publication-${id}` }];
+  }));
+}
+
+function RelatedPapersLink({ tagId }: { tagId: number }) {
+  const count = relatedPublications(tagId).length;
+  return <a className="related-papers-link" href={`#research-papers-${tagId}`}>Related {count} {count === 1 ? "paper" : "papers"}</a>;
+}
+
+function ResearchPapersModal({ tagId }: { tagId: number }) {
+  const tag = researchTagMeta[tagId];
+  const related = relatedPublications(tagId);
+  return (
+    <section className="research-modal" id={`research-papers-${tagId}`} aria-labelledby={`research-papers-title-${tagId}`}>
+      <a className="research-modal-backdrop" href="#research" aria-label="Close related papers" />
+      <div className="research-modal-window" role="dialog" aria-modal="true">
+        <div className="research-modal-heading">
+          <div>
+            <span className={`research-tag ${tag.className}`}>{tag.label}</span>
+            <h3 id={`research-papers-title-${tagId}`}>Related Papers</h3>
+          </div>
+          <a className="research-modal-close" href="#research" aria-label="Close related papers">×</a>
+        </div>
+        <ol className="research-modal-list">
+          {related.map(({ id, item, href }) => (
+            <li key={id}><a href={href}>{highlightSelfAuthor(unwrapPublicationLinks(item))}</a></li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  );
 }
 
 function highlightSelfAuthor(node: React.ReactNode): React.ReactNode {
@@ -194,11 +243,12 @@ export default function Home() {
             <p>My research focuses on system-level design of wireless communication under practical constraints such as latency, limited observability, and signaling overhead, with selective use of machine learning where it is effective.</p>
           </div>
           <div className="interest-grid">
-            <article><span>01</span><h3>AI-Native RAN</h3><p>Learned channel representations and generative channel modeling for AI-native radio access networks.</p></article>
-            <article><span>02</span><h3>Adaptive Wireless Systems</h3><p>Adaptive optimization of wireless systems under high mobility and dynamically varying channel conditions.</p></article>
-            <article><span>03</span><h3>CSI Representation</h3><p>Efficient representation, prediction, feedback, and exploitation of CSI for improved wireless communication.</p></article>
-            <article><span>04</span><h3>Physical AI</h3><p>Wireless communication infrastructure for scalable physical AI and cloud-edge robotics.</p></article>
+            <article><span>01</span><h3>AI-Native RAN</h3><p>Learned channel representations and generative channel modeling for AI-native radio access networks.</p><RelatedPapersLink tagId={1} /></article>
+            <article><span>02</span><h3>Adaptive Wireless Systems</h3><p>Adaptive optimization of wireless systems under high mobility and dynamically varying channel conditions.</p><RelatedPapersLink tagId={2} /></article>
+            <article><span>03</span><h3>CSI Representation</h3><p>Efficient representation, prediction, feedback, and exploitation of CSI for improved wireless communication.</p><RelatedPapersLink tagId={3} /></article>
+            <article><span>04</span><h3>Physical AI</h3><p>Intelligence, communication, and computing for scalable physical AI and cloud-edge robotic systems.</p><RelatedPapersLink tagId={4} /></article>
           </div>
+          {[1, 2, 3, 4].map((tagId) => <ResearchPapersModal tagId={tagId} key={tagId} />)}
         </section>
 
         <section className="section" id="publications">
