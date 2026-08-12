@@ -54,6 +54,7 @@ jobs:
           curl --fail --silent http://localhost:3100/my-vision --output dist/client/my-vision/index.html
           curl --fail --silent http://localhost:3100/my-learnings --output dist/client/my-learnings/index.html
           find dist/client -name index.html -exec perl -0pi -e 's#<script\b[^>]*>.*?</script>##gs' {} +
+          find dist/client -name index.html -exec perl -0pi -e 's#</body>#<script src="/navigation.js" defer></script></body>#i' {} +
           kill "$SERVER_PID"
           touch dist/client/.nojekyll
 
