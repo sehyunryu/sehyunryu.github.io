@@ -175,10 +175,12 @@ export default function Home() {
         <section className="section" id="activities">
           <div className="section-heading"><span>04</span><h2>Academic Activities</h2></div>
           <div className="activity-grid">
-            <article><h3>Journal Reviewer</h3><ul><li><em>IEEE Transactions on Wireless Communications.</em></li><li><em>IEEE Transactions on Communications.</em></li><li><em>IEEE Transactions on Vehicular Technology.</em></li><li><em>IEEE Transactions on Information Forensics &amp; Security.</em></li><li><em>IEEE Wireless Communications Letters.</em></li><li><em>The Journal of Supercomputing.</em></li><li><em>The Journal of Korean Institute of Communications and Information Sciences.</em></li><li><em>Frontiers in Psychology.</em></li></ul></article>
-            <article><h3>Conference Reviewer</h3><ul><li><em>IEEE Consumer Communications &amp; Networking Conference (CCNC)</em><span className="activity-year">2024, 2025</span></li></ul></article>
-            <article><h3>Technical Program Committee</h3><ul><li><em>IEEE Consumer Communications &amp; Networking Conference (CCNC)</em><span className="activity-year">2027</span></li><li><em>KICS International Conference on ICT Convergence (ICTC)</em><span className="activity-year">2025</span></li></ul></article>
-            <article><h3>Conference Assistant</h3><ul><li><em>IEEE/IEIE International Conference on Consumer Electronics Asia (ICCE-Asia)</em><span className="activity-year">2025</span></li></ul></article>
+            <article><h3>Journal</h3><ul><li><em>IEEE Transactions on Wireless Communications.</em></li><li><em>IEEE Transactions on Communications.</em></li><li><em>IEEE Transactions on Vehicular Technology.</em></li><li><em>IEEE Transactions on Information Forensics &amp; Security.</em></li><li><em>IEEE Wireless Communications Letters.</em></li><li><em>The Journal of Supercomputing.</em></li><li><em>The Journal of Korean Institute of Communications and Information Sciences.</em></li><li><em>Frontiers in Psychology.</em></li></ul></article>
+            <article className="conference-activity"><h3>Conference</h3>
+              <div className="activity-subsection"><h4>Conference Reviewer</h4><ul><li><em>IEEE Consumer Communications &amp; Networking Conference (CCNC)</em><span className="activity-year">2024, 2025</span></li></ul></div>
+              <div className="activity-subsection"><h4>Technical Program Committee</h4><ul><li><em>IEEE Consumer Communications &amp; Networking Conference (CCNC)</em><span className="activity-year">2027</span></li><li><em>KICS International Conference on ICT Convergence (ICTC)</em><span className="activity-year">2025</span></li></ul></div>
+              <div className="activity-subsection"><h4>Conference Assistant</h4><ul><li><em>IEEE/IEIE International Conference on Consumer Electronics Asia (ICCE-Asia)</em><span className="activity-year">2025</span></li></ul></div>
+            </article>
             <article><h3>Teaching Assistant</h3><ul><li><em>EECE490W: Introduction to Reinforcement Learning, POSTECH (Spring 2023).</em></li><li><em>EECE695V: Introduction to AI for Graduate School Students, POSTECH (Fall 2023).</em></li></ul></article>
           </div>
 
