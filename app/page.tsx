@@ -12,6 +12,7 @@ const publications = [
       <><strong>[P5]</strong> Hyeonsu Lyu, Minwoo Kim, Sehyun Ryu, and Hyun Jong Yang*, double-blinded, submitted to <em>IEEE INFOCOM</em>, 2026.</>,
       <><strong>[P6]</strong> Hyeonsu Lyu, Jonggyu Jang, Sehyun Ryu, and Hyun Jong Yang*, <a href="https://arxiv.org/abs/2312.05586">“Deeper Understanding of Black-box Predictions via Generalized Influence Functions,”</a> <em className="venue-mark arxiv-mark">arXiv</em>, 2024.</>,
     ],
+    tags: [[1, 3], [2], [4], [3], [3], [1]],
   },
   {
     title: "International Journals",
@@ -24,6 +25,7 @@ const publications = [
       <><strong>[J2]</strong> Seungmin Choi(=), Hosung Joo(=), Sehyun Ryu, Tommaso Melodia, and Hyun Jong Yang*, <a href="https://ieeexplore.ieee.org/document/11215681">“Performance-Guaranteed CSI Feedback via Model-Free Incremental Residual Compression Framework,”</a> <em className="venue-mark journal-mark">IEEE Wireless Communications Letters</em>, vol. 15, pp. 880–884, 2025.</>,
       <><strong>[J1]</strong> Sehyun Ryu(=), Jonggyu Jang(=), and Hyun Jong Yang*, <a href="https://ieeexplore.ieee.org/document/10609362?source=authoralert">“Noise Variance Optimization in Differential Privacy: A Game-Theoretic Approach Through Per-Instance Differential Privacy,”</a> <em className="venue-mark journal-mark">IEEE Access</em>, vol. 12, pp. 103104–103118, 2024.</>,
     ],
+    tags: [[3], [2, 3], [4], [2, 3], [4], [3], [1]],
   },
   {
     title: "International Conference Proceedings",
@@ -32,6 +34,7 @@ const publications = [
       <><strong>[C2]</strong> Jaehyun Choi, Sehyun Ryu, Seungmin Choi, and Hyun Jong Yang*, <a href="https://ieeexplore.ieee.org/document/11263604">“RT-AUGGAN: Robust Fingerprint Positioning under Environmental Variations via Ray Tracing-Assisted GAN Augmentation,”</a> <em className="venue-mark conference-mark">IEEE ICCE-Asia</em>, Busan, Republic of Korea, 2025.</>,
       <><strong>[C1]</strong> Sehyun Ryu, Hosung Joo, Jonggyu Jang, and Hyun Jong Yang*, <a href="https://ojs.aaai.org/index.php/AAAI/article/view/30506">“Instance-Wise Laplace Mechanism via Deep Reinforcement Learning,”</a> <em className="venue-mark aaai-mark">AAAI Conference on Artificial Intelligence</em>, Vancouver, Canada, 2024, 38(21), pp. 23640–23641. <span className="award">Oral presentation</span></>,
     ],
+    tags: [[2], [2], [1]],
   },
   {
     title: "Korean Domestic Papers",
@@ -43,8 +46,16 @@ const publications = [
       <><strong>[D2]</strong> Sehyun Ryu and Hyun Jong Yang*, “Research Trends of Deep Learning-Based Algorithms for Reduced CSI Feedback Overhead,” <em className="venue-mark domestic-mark">JCCI</em>, Busan, Republic of Korea, 2024.</>,
       <><strong>[D1]</strong> Sehyun Ryu and Hyun Jong Yang*, “Additive Machine Unlearning Algorithm Using Orthogonality,” <em className="venue-mark domestic-mark">Summer Conference of KICS</em>, Jeju Island, Republic of Korea, 2023.</>,
     ],
+    tags: [[4], [4], [1, 4], [1], [3], [1]],
   },
 ];
+
+const researchTagMeta: Record<number, { label: string; className: string }> = {
+  1: { label: "AI-Native RAN", className: "research-tag-1" },
+  2: { label: "Adaptive Wireless Systems", className: "research-tag-2" },
+  3: { label: "CSI Representation", className: "research-tag-3" },
+  4: { label: "Physical AI", className: "research-tag-4" },
+};
 
 const patents = [
   '“Data Augmentation Method for Indoor Positioning based on Wireless Channel State Information and Computer Device Thereof,” Hyun Jong Yang, Jaehyun Choi, Seungmin Choi, and Sehyun Ryu, KR 10-2026-0012777 (filed).',
@@ -65,7 +76,7 @@ const education = [
   { period: "Feb. 2018 — Feb. 2023", role: "B.S. in Electrical Engineering", institution: "POSTECH", location: "Pohang, Republic of Korea", logo: "/postech-logo.png", logoClass: "postech", detail: "Magna Cum Laude" },
 ];
 
-function PublicationGroup({ title, items }: { title: string; items: React.ReactNode[] }) {
+function PublicationGroup({ title, items, tags }: { title: string; items: React.ReactNode[]; tags: number[][] }) {
   return (
     <section className="publication-group">
       <h3>{title}</h3>
@@ -73,7 +84,15 @@ function PublicationGroup({ title, items }: { title: string; items: React.ReactN
         {items.map((item, index) => {
           const href = findFirstPublicationHref(item);
           const content = highlightSelfAuthor(unwrapPublicationLinks(item));
-          return <li key={index}>{href ? <a className="publication-entry-link" href={href}>{content}</a> : content}</li>;
+          return <li key={index}>
+            {href ? <a className="publication-entry-link" href={href}>{content}</a> : content}
+            <div className="publication-tags" aria-label="Research interest tags">
+              {(tags[index] ?? []).map((tagId) => {
+                const tag = researchTagMeta[tagId];
+                return <span className={`research-tag ${tag.className}`} key={tagId}>{tag.label}</span>;
+              })}
+            </div>
+          </li>;
         })}
       </ol>
     </section>

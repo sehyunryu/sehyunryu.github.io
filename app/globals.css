@@ -75,6 +75,12 @@ h1 strong { font-weight:700; }
 .publication-list em { color:var(--ink); }
 .publication-entry-link { display:block; color:inherit; text-decoration:none; }
 .publication-entry-link:hover { color:inherit; }
+.publication-tags { display:flex; flex-wrap:wrap; gap:5px; margin-top:5px; }
+.research-tag { display:inline-flex; align-items:center; min-height:20px; padding:1px 8px; border:1px solid rgba(90,90,90,.1); border-radius:99px; color:#555; font-size:10.5px; font-style:normal; font-weight:600; line-height:1.35; }
+.research-tag-1 { background:#E6E6FA; }
+.research-tag-2 { background:#FFFAFA; }
+.research-tag-3 { background:#E0FFFF; }
+.research-tag-4 { background:#F5FFFA; }
 .publication-list .venue-mark {
   padding:.04em .12em;
   background-repeat:no-repeat;
