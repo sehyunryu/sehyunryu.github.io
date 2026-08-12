@@ -113,7 +113,7 @@ export default function Home() {
         </section>
 
         <section className="section research" id="research">
-          <div className="section-heading"><span>01</span><h2>Research interests</h2></div>
+          <div className="section-heading"><span>01</span><h2>Research Interests</h2></div>
           <div className="research-intro">
             <p>My research focuses on system-level design of wireless communication under practical constraints such as latency, limited observability, and signaling overhead, with selective use of machine learning where it is effective.</p>
           </div>
@@ -140,17 +140,17 @@ export default function Home() {
         </section>
 
         <section className="section" id="activities">
-          <div className="section-heading"><span>04</span><h2>Academic activities</h2></div>
+          <div className="section-heading"><span>04</span><h2>Academic Activities</h2></div>
           <div className="activity-grid">
             <article><h3>Journal reviewer</h3><ul><li>IEEE Transactions on Wireless Communications</li><li>IEEE Transactions on Communications</li><li>IEEE Transactions on Vehicular Technology</li><li>IEEE Transactions on Information Forensics &amp; Security</li><li>IEEE Wireless Communications Letters</li><li>The Journal of Supercomputing</li><li>J-KICS</li><li>Frontiers in Psychology</li></ul></article>
             <article><h3>Conference service</h3><ul><li>Reviewer, IEEE CCNC (2024, 2025)</li><li>TPC, IEEE CCNC (2027)</li><li>TPC, KICS ICTC (2025)</li><li>Conference Assistant, IEEE/IEIE ICCE-Asia (2025)</li></ul></article>
             <article><h3>Teaching assistant</h3><ul><li>EECE490W: Introduction to Reinforcement Learning, POSTECH (Spring 2023)</li><li>EECE695V: Introduction to AI for Graduate School Students, POSTECH (Fall 2023)</li></ul></article>
           </div>
 
-          <div className="subsection-heading"><h2>Honors &amp; awards</h2></div>
+          <div className="subsection-heading"><h2>Honors &amp; Awards</h2></div>
           <ul className="plain-list"><li><strong>Grand Prize</strong>, New Industry Sector Ideas and Patent Rights Competition, Korea Invention Promotion Association, 2024.</li><li><strong>Excellence Award</strong>, Undergraduate Group Research Program (UGRP), POSTECH, 2019.</li><li><strong>Jigok Scholarship</strong>, full tuition, POSTECH, Mar. 2018 – Feb. 2023.</li></ul>
 
-          <div className="subsection-heading"><h2>Research projects</h2></div>
+          <div className="subsection-heading"><h2>Research Projects</h2></div>
           <ul className="plain-list"><li><strong>Development of a 5G-A vRAN Research Platform</strong> · IITP · 12.8B KRW · Jun. 2024 – Dec. 2028.</li><li><strong>AI-Based CBF Overhead Reduction</strong> · Samsung Electronics (S.LSI) · 300M KRW · Feb. 2024 – Aug. 2024.</li><li><strong>Data processing methods and simulated signal generation for AI radar data analysis</strong> · ADD · 90M KRW · Oct. 2023 – Dec. 2024.</li></ul>
         </section>
       </main>
