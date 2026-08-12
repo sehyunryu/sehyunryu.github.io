@@ -55,14 +55,14 @@ const patents = [
 ];
 
 const timeline = [
-  { period: "Starting Oct. 2026", role: "Visiting Student Researcher", place: "Stanford University · Stanford, CA, USA", detail: "Department of Electrical Engineering · Machine Learning and Communications Laboratory · Host: Prof. John M. Cioffi" },
-  { period: "Nov. 2025 — Present", role: "Industry-sponsored Ph.D. Researcher", place: "Samsung Electronics · Hwaseong, Republic of Korea", detail: "DS Division, System LSI Business, Modem Development Team · Post-graduation Employment Program" },
-  { period: "Jan. 2025 — Present", role: "External Research Fellow", place: "Seoul National University · Seoul, Republic of Korea", detail: "Institute of New Media and Communications · Advanced Intelligent Systems Laboratory" },
+  { period: "Starting Oct. 2026", role: "Visiting Student Researcher", institution: "Stanford University", location: "Stanford, CA, USA", logo: "/stanford-logo.png", logoClass: "stanford", detail: "Department of Electrical Engineering · Machine Learning and Communications Laboratory · Host: Prof. John M. Cioffi" },
+  { period: "Nov. 2025 — Present", role: "Industry-sponsored Ph.D. Researcher", institution: "Samsung Electronics", location: "Hwaseong, Republic of Korea", logo: "/samsung-logo.png", logoClass: "samsung", detail: "DS Division, System LSI Business, Modem Development Team · Post-graduation Employment Program" },
+  { period: "Jan. 2025 — Present", role: "External Research Fellow", institution: "Seoul National University", location: "Seoul, Republic of Korea", logo: "/snu-logo.png", logoClass: "snu", detail: "Institute of New Media and Communications · Advanced Intelligent Systems Laboratory" },
 ];
 
 const education = [
-  { period: "Feb. 2023 — Present", role: "Ph.D. Candidate in Electrical Engineering", place: "POSTECH · Pohang, Republic of Korea", detail: "Advanced Intelligent Systems Laboratory · Advisor: Prof. Hyun Jong Yang" },
-  { period: "Feb. 2018 — Feb. 2023", role: "B.S. in Electrical Engineering", place: "POSTECH · Pohang, Republic of Korea", detail: "Magna Cum Laude" },
+  { period: "Feb. 2023 — Present", role: "Ph.D. Candidate in Electrical Engineering", institution: "POSTECH", location: "Pohang, Republic of Korea", logo: "/postech-logo.png", logoClass: "postech", detail: "Advanced Intelligent Systems Laboratory · Advisor: Prof. Hyun Jong Yang" },
+  { period: "Feb. 2018 — Feb. 2023", role: "B.S. in Electrical Engineering", institution: "POSTECH", location: "Pohang, Republic of Korea", logo: "/postech-logo.png", logoClass: "postech", detail: "Magna Cum Laude" },
 ];
 
 function PublicationGroup({ title, items }: { title: string; items: React.ReactNode[] }) {
@@ -95,7 +95,19 @@ function Timeline({ items }: { items: typeof timeline }) {
   return <div className="timeline">{items.map((item) => (
     <article className="timeline-item" key={`${item.role}-${item.period}`}>
       <div className="timeline-period">{item.period}</div>
-      <div><h3>{item.role}</h3><p className="timeline-place">{item.place}</p><p>{item.detail}</p></div>
+      <div className="timeline-main">
+        <div className="timeline-copy">
+          <h3>{item.role}</h3>
+          <p className="timeline-place">
+            <span>{item.institution}</span>
+            <span className="timeline-location"><img src="/location.svg" alt="" />{item.location}</span>
+          </p>
+          <p>{item.detail}</p>
+        </div>
+        <div className={`timeline-logo-frame ${item.logoClass}`}>
+          <img className="timeline-logo" src={item.logo} alt={`${item.institution} logo`} />
+        </div>
+      </div>
     </article>
   ))}</div>;
 }
