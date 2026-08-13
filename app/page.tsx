@@ -54,7 +54,7 @@ const researchTagMeta: Record<number, { label: string; className: string }> = {
   1: { label: "AI-Native RAN", className: "research-tag-1" },
   2: { label: "Adaptive Wireless Systems", className: "research-tag-2" },
   3: { label: "CSI Representation", className: "research-tag-3" },
-  4: { label: "Physical AI", className: "research-tag-4" },
+  4: { label: "Machine Intelligence and Physical AI", className: "research-tag-4" },
 };
 
 const patents = [
@@ -246,7 +246,7 @@ export default function Home() {
             <article><span>01</span><h3>AI-Native RAN</h3><p>Learned channel representations and generative channel modeling for AI-native radio access networks.</p><RelatedPapersLink tagId={1} /></article>
             <article><span>02</span><h3>Adaptive Wireless Systems</h3><p>Adaptive optimization of wireless systems under high mobility and dynamically varying channel conditions.</p><RelatedPapersLink tagId={2} /></article>
             <article><span>03</span><h3>CSI Representation</h3><p>Efficient representation, prediction, feedback, and exploitation of CSI for improved wireless communication.</p><RelatedPapersLink tagId={3} /></article>
-            <article><span>04</span><h3>Physical AI</h3><p>Intelligence, communication, and computing for scalable physical AI and cloud-edge robotic systems.</p><RelatedPapersLink tagId={4} /></article>
+            <article><span>04</span><h3>Machine Intelligence and Physical AI</h3><p>Intelligence, communication, and computing for scalable physical AI and cloud-edge robotic systems.</p><RelatedPapersLink tagId={4} /></article>
           </div>
           {[1, 2, 3, 4].map((tagId) => <ResearchPapersModal tagId={tagId} key={tagId} />)}
         </section>
@@ -270,9 +270,9 @@ export default function Home() {
         </section>
 
         <section className="section" id="activities">
-          <div className="section-heading"><span>04</span><h2>Academic Activities</h2></div>
+          <div className="section-heading"><span>04</span><h2>Academic Service</h2></div>
           <div className="activity-grid">
-            <article><h3>Journal</h3><ul><li><em>IEEE Transactions on Wireless Communications.</em></li><li><em>IEEE Transactions on Communications.</em></li><li><em>IEEE Transactions on Vehicular Technology.</em></li><li><em>IEEE Transactions on Information Forensics &amp; Security.</em></li><li><em>IEEE Wireless Communications Letters.</em></li><li><em>The Journal of Supercomputing.</em></li><li><em>The Journal of Korean Institute of Communications and Information Sciences.</em></li><li><em>Frontiers in Psychology.</em></li></ul></article>
+            <article><h3>Journal Reviewer</h3><ul><li><em>IEEE Transactions on Wireless Communications.</em></li><li><em>IEEE Transactions on Communications.</em></li><li><em>IEEE Transactions on Vehicular Technology.</em></li><li><em>IEEE Transactions on Information Forensics &amp; Security.</em></li><li><em>IEEE Wireless Communications Letters.</em></li><li><em>The Journal of Supercomputing.</em></li><li><em>The Journal of Korean Institute of Communications and Information Sciences.</em></li><li><em>Frontiers in Psychology.</em></li></ul></article>
             <article className="conference-activity"><h3>Conference</h3>
               <div className="activity-subsection"><h4>Conference Reviewer</h4><ul><li><em>IEEE Consumer Communications &amp; Networking Conference (CCNC)</em><span className="activity-year">2024, 2025</span></li></ul></div>
               <div className="activity-subsection"><h4>Technical Program Committee</h4><ul><li><em>IEEE Consumer Communications &amp; Networking Conference (CCNC)</em><span className="activity-year">2027</span></li><li><em>KICS International Conference on ICT Convergence (ICTC)</em><span className="activity-year">2025</span></li></ul></div>
