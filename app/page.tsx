@@ -31,8 +31,8 @@ const publications = [
     title: "International Conference Proceedings",
     items: [
       <><strong>[C3]</strong> Sehyun Ryu and Hyun Jong Yang*, “Blockage-Aware Multi-RIS Sensing and Optimization for mmWave Smart Radio Environments,” <em className="venue-mark conference-mark">IEEE GLOBECOM</em>, Macau, China, accepted, 2026.</>,
-      <><strong>[C2]</strong> Jaehyun Choi, Sehyun Ryu, Seungmin Choi, and Hyun Jong Yang*, <a href="https://ieeexplore.ieee.org/document/11263604">“RT-AUGGAN: Robust Fingerprint Positioning under Environmental Variations via Ray Tracing-Assisted GAN Augmentation,”</a> <em className="venue-mark conference-mark">IEEE ICCE-Asia</em>, Busan, Republic of Korea, 2025, pp. 1-6, doi: 10.1109/ICCE-Asia67487.2025.11263604.</>,
-      <><strong>[C1]</strong> Sehyun Ryu, Hosung Joo, Jonggyu Jang, and Hyun Jong Yang*, <a href="https://ojs.aaai.org/index.php/AAAI/article/view/30506">“Instance-Wise Laplace Mechanism via Deep Reinforcement Learning,”</a> <em className="venue-mark aaai-mark">AAAI Conference on Artificial Intelligence (Student Abstract and Poster Program)</em>, Vancouver, Canada, 2024, 38(21), pp. 23640–23641, doi: 10.1609/aaai.v38i21.30506. <span className="award">Oral presentation</span></>,
+      <><strong>[C2]</strong> Jaehyun Choi, Sehyun Ryu, Seungmin Choi, and Hyun Jong Yang*, <a href="https://ieeexplore.ieee.org/document/11263604">“RT-AUGGAN: Robust Fingerprint Positioning under Environmental Variations via Ray Tracing-Assisted GAN Augmentation,”</a> <em className="venue-mark conference-mark">IEEE ICCE-Asia</em>, Busan, Republic of Korea, pp. 1–6, 2025.</>,
+      <><strong>[C1]</strong> Sehyun Ryu, Hosung Joo, Jonggyu Jang, and Hyun Jong Yang*, <a href="https://ojs.aaai.org/index.php/AAAI/article/view/30506">“Instance-Wise Laplace Mechanism via Deep Reinforcement Learning,”</a> <em className="venue-mark aaai-mark">AAAI Conference on Artificial Intelligence (Student Abstract and Poster Program)</em>, Vancouver, Canada, 38(21), pp. 23640–23641, 2024. <span className="award">Oral presentation</span></>,
     ],
     tags: [[2], [1, 2, 3], [4]],
   },
