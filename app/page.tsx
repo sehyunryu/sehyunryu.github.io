@@ -44,7 +44,7 @@ const publications = [
       <><strong>[D4]</strong> <a href="https://www.dbpia.co.kr/pdf/pdfView.do?nodeId=NODE12738510&width=1280">Sehyun Ryu and Hyun Jong Yang*, “A Survey of the Application of Ray-Tracing-Based Channel Modeling for Digital Twin Environments,” <em className="venue-mark domestic-mark">Winter Conference of KICS</em>, Pyeongchang, Republic of Korea, 2026.</a></>,
       <><strong>[D3]</strong> Sehyun Ryu and Hyun Jong Yang*, “Trends in Utilizing Generative Models for Wireless Communications,” <em className="venue-mark domestic-mark">KICS Information and Communications Magazine</em>, 2024.</>,
       <><strong>[D2]</strong> Sehyun Ryu and Hyun Jong Yang*, “Research Trends of Deep Learning-Based Algorithms for Reduced CSI Feedback Overhead,” <em className="venue-mark domestic-mark">JCCI</em>, Busan, Republic of Korea, 2024.</>,
-      <><strong>[D1]</strong> <a href="https://www.dbpia.co.kr/pdf/pdfView.do?nodeId=NODE11487331"></>Sehyun Ryu and Hyun Jong Yang*, “Additive Machine Unlearning Algorithm Using Orthogonality,” <em className="venue-mark domestic-mark">Summer Conference of KICS</em>, Jeju Island, Republic of Korea, 2023.</a></>,
+      <><strong>[D1]</strong> <a href="https://www.dbpia.co.kr/pdf/pdfView.do?nodeId=NODE11487331">Sehyun Ryu and Hyun Jong Yang*, “Additive Machine Unlearning Algorithm Using Orthogonality,” <em className="venue-mark domestic-mark">Summer Conference of KICS</em>, Jeju Island, Republic of Korea, 2023.</a></>,
     ],
     tags: [[1, 2, 4], [1, 4], [1, 4], [1, 3], [1, 3], [4]],
   },
