@@ -5,12 +5,12 @@ const publications = [
   {
     title: "Preprints",
     items: [
-      <><strong>[P1]</strong> <a href="https://arxiv.org/abs/2607.24872">Sehyun Ryu, Yumin Kim, Minjae Lee, Hyun Jong Yang*, and John M. Cioffi*, “Beam-Response Contrastive Learning for Transmitter-Side MIMO CSI Representation,” <em className="venue-mark arxiv-mark">arXiv</em>, 2026.</a></>,
-      <><strong>[P2]</strong> <a href="https://arxiv.org/abs/2608.25393">Sehyun Ryu, Seungmin Choi, Hyun Jong Yang*, and John M. Cioffi*, “End-to-End Mobility-Aware Multi-RIS Optimization via Blockage Detection and Closed-Form Riemannian Updates,” <em className="venue-mark arxiv-mark">arXiv</em>, 2026.</a></>,
+      <><strong>[P1]</strong> <a href="https://arxiv.org/abs/2607.24872"> Sehyun Ryu, Yumin Kim, Minjae Lee, Hyun Jong Yang*, and John M. Cioffi*, “Self-Supervised Pretraining for Transmission-Relevant MIMO CSI Representation,” <em className="venue-mark arxiv-mark">arXiv</em>, 2026.</a></>,
+      <><strong>[P2]</strong> <a href="https://arxiv.org/abs/2608.25393"> Sehyun Ryu, Seungmin Choi, Hyun Jong Yang*, and John M. Cioffi*, “End-to-End Mobility-Aware Multi-RIS Optimization via Blockage Detection and Closed-Form Riemannian Updates,” <em className="venue-mark arxiv-mark">arXiv</em>, 2026.</a></>,
       <><strong>[P3]</strong> Jeonghyun An(=), Sehyun Ryu(=), and Hyun Jong Yang*, “Contamination-Aware Task Allocation for Cell-Free Cloud-Robotic AMR Warehouses,” submitted to <em>IEEE Internet of Things Journal</em>, 2026.</>,
-      <><strong>[P4]</strong> <a href="https://arxiv.org/abs/2608.01713">Minwoo Kim, Hyeonsu Lyu, Sehyun Ryu, Sojeong Park, and Hyun Jong Yang*, “Temporal Channel Estimation for Generalized CSI Feedback,” <em className="venue-mark arxiv-mark">arXiv</em>, 2026.</a></>,
-      <><strong>[P5]</strong> Hyeonsu Lyu, Minwoo Kim, Sehyun Ryu, and Hyun Jong Yang*, double-blinded, submitted to <em>IEEE INFOCOM</em>, 2026.</>,
-      <><strong>[P6]</strong> <a href="https://arxiv.org/abs/2312.05586">Hyeonsu Lyu, Jonggyu Jang, Sehyun Ryu, and Hyun Jong Yang*, “Deeper Understanding of Black-box Predictions via Generalized Influence Functions,” <em className="venue-mark arxiv-mark">arXiv</em>, 2024.</a></>,
+      <><strong>[P4]</strong> <a href="https://arxiv.org/abs/2608.01713"> Minwoo Kim, Hyeonsu Lyu, Sehyun Ryu, Sojeong Park, and Hyun Jong Yang*, “Temporal Channel Estimation for Generalized CSI Feedback,” <em className="venue-mark arxiv-mark">arXiv</em>, 2026.</a></>,
+      <><strong>[P5]</strong> <a href="https://arxiv.org/abs/2608.28437"> Hyeonsu Lyu, Minwoo Kim, Sehyun Ryu, and Hyun Jong Yang*, “LUCID: An Agentic AI Framework on Digital-Twin in the Loop for QoS-Guaranteeing Robotic Control,” <em className="venue-mark arxiv-mark">arXiv</em>, 2026.</a></>,
+      <><strong>[P6]</strong> <a href="https://arxiv.org/abs/2312.05586"> Hyeonsu Lyu, Jonggyu Jang, Sehyun Ryu, and Hyun Jong Yang*, “Deeper Understanding of Black-box Predictions via Generalized Influence Functions,” <em className="venue-mark arxiv-mark">arXiv</em>, 2024.</a></>,
     ],
     tags: [[1, 3], [2], [2, 3], [1, 4], [1, 2, 4], [4]],
   },
