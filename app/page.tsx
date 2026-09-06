@@ -30,7 +30,7 @@ const publications = [
   {
     title: "International Conference Proceedings",
     items: [
-      <><strong>[C3]</strong> Sehyun Ryu and Hyun Jong Yang*, “Blockage-Aware Multi-RIS Sensing and Optimization for mmWave Smart Radio Environments,” <em className="venue-mark conference-mark">IEEE Global Communications Conference (GLOBECOM)</em>, Macau, China, accepted, 2026.</>,
+      <><strong>[C3]</strong> Sehyun Ryu and Hyun Jong Yang*, “Blockage-Aware Multi-RIS Sensing and Optimization for mmWave Smart Radio Environments,” <em className="venue-mark conference-mark">IEEE Global Communications Conference (GLOBECOM)</em>, Macau, China, accepted, 2026. <span className="award">Oral presentation</span></>,
       <><strong>[C2]</strong> <a href="https://ieeexplore.ieee.org/document/11263604">Jaehyun Choi, Sehyun Ryu, Seungmin Choi, and Hyun Jong Yang*, “RT-AUGGAN: Robust Fingerprint Positioning under Environmental Variations via Ray Tracing-Assisted GAN Augmentation,” <em className="venue-mark conference-mark">IEEE ICCE-Asia</em>, Busan, Republic of Korea, pp. 1–6, 2025.</a></>,
       <><strong>[C1]</strong> <a href="https://ojs.aaai.org/index.php/AAAI/article/view/30506">Sehyun Ryu, Hosung Joo, Jonggyu Jang, and Hyun Jong Yang*, “Instance-Wise Laplace Mechanism via Deep Reinforcement Learning,” <em className="venue-mark aaai-mark">AAAI Conference on Artificial Intelligence (Student Abstract and Poster Program)</em>, Vancouver, Canada, 38(21), pp. 23640–23641, 2024.</a> <span className="award">Oral presentation</span></>,
     ],
