@@ -26,7 +26,10 @@ function LearningList({ items, columns = false, institutionBadges = false, autho
 function CountryCard({ entry }: { entry: string }) {
   const match = entry.match(/^(.+?) \((.+)\)$/);
   const country = match?.[1] ?? entry;
-  const cities = match?.[2].split(", ") ?? [];
+  // US entries group each city and state in parentheses: (Los Angeles, CA), (New York, NY).
+  const cities = country.startsWith("🇺🇸 ")
+    ? Array.from(entry.matchAll(/\(([^()]+)\)/g), ([, city]) => city.trim())
+    : match?.[2].split(", ") ?? [];
 
   return (
     <article className="country-card">

@@ -23,6 +23,12 @@ Open `http://localhost:3000`.
 - `public/profile.webp` — profile photograph
 - `public/og.webp` — social sharing image
 
+Visited countries are maintained in `app/my-learnings/data.json`. For US cities,
+wrap each city and state in its own parentheses, for example
+`🇺🇸 United States of America (Los Angeles, CA), (New York, NY)`.
+Each pair is displayed as a single city label, without the parentheses. Other
+countries keep their existing comma-separated city format.
+
 ## Deployment
 
 Pushing to `main` triggers `.github/workflows/deploy.yml`. The workflow builds the app, produces a static snapshot, and deploys it to GitHub Pages.
