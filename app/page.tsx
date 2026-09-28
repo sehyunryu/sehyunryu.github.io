@@ -34,7 +34,7 @@ const publications = [
       <><strong>[C2]</strong> <a href="https://ieeexplore.ieee.org/document/11263604">Jaehyun Choi, Sehyun Ryu, Seungmin Choi, and Hyun Jong Yang*, “RT-AUGGAN: Robust Fingerprint Positioning under Environmental Variations via Ray Tracing-Assisted GAN Augmentation,” <em className="venue-mark conference-mark">IEEE International Conference on Consumer Electronics Asia (ICCE-Asia)</em>, Busan, Republic of Korea, pp. 1–6, 2025.</a></>,
       <><strong>[C1]</strong> <a href="https://ojs.aaai.org/index.php/AAAI/article/view/30506">Sehyun Ryu, Hosung Joo, Jonggyu Jang, and Hyun Jong Yang*, “Instance-Wise Laplace Mechanism via Deep Reinforcement Learning,” <em className="venue-mark aaai-mark">AAAI Conference on Artificial Intelligence (Student Abstract and Poster Program)</em>, Vancouver, Canada, 38(21), pp. 23640–23641, 2024.</a> <span className="award">Oral presentation</span></>,
     ],
-    tags: [[2], [1, 2, 3], [4]],
+    tags: [[4], [2], [1, 2, 3], [4]],
   },
   {
     title: "Korean Domestic Papers",
