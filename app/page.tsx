@@ -10,7 +10,6 @@ const publications = [
       <><strong>[P3]</strong> Jeonghyun An(=), Sehyun Ryu(=), and Hyun Jong Yang*, “Contamination-Aware Task Allocation for Cell-Free Cloud-Robotic AMR Warehouses,” submitted to <em>IEEE Internet of Things Journal</em>, 2026.</>,
       <><strong>[P4]</strong> <a href="https://arxiv.org/abs/2608.01713"> Minwoo Kim, Hyeonsu Lyu, Sehyun Ryu, Sojeong Park, and Hyun Jong Yang*, “Temporal Channel Estimation for Generalized CSI Feedback,” <em className="venue-mark arxiv-mark">arXiv</em>, 2026.</a></>,
       <><strong>[P5]</strong> <a href="https://arxiv.org/abs/2608.28437"> Hyeonsu Lyu, Minwoo Kim, Sehyun Ryu, and Hyun Jong Yang*, “LUCID: An Agentic AI Framework on Digital-Twin in the Loop for QoS-Guaranteeing Robotic Control,” <em className="venue-mark arxiv-mark">arXiv</em>, 2026.</a></>,
-      <><strong>[P6]</strong> <a href="https://arxiv.org/abs/2312.05586"> Hyeonsu Lyu, Jonggyu Jang, Sehyun Ryu, and Hyun Jong Yang*, “Deeper Understanding of Black-box Predictions via Generalized Influence Functions,” <em className="venue-mark arxiv-mark">arXiv</em>, 2024.</a></>,
     ],
     tags: [[1, 3], [2], [2, 3], [1, 4], [1, 2, 4], [4]],
   },
@@ -30,6 +29,7 @@ const publications = [
   {
     title: "International Conference Proceedings",
     items: [
+      <><strong>[C4]</strong> <a href="https://arxiv.org/abs/2312.05586"> Hyeonsu Lyu, Jonggyu Jang, Sehyun Ryu, and Hyun Jong Yang*, “Deeper Understanding of Black-box Predictions via Generalized Influence Functions,” <em className="venue-mark aaai-mark">Annual Conference on Neural Information Processing Systems</em>, Sydney, Australia, 2026.</a></>,
       <><strong>[C3]</strong> Sehyun Ryu and Hyun Jong Yang*, “Blockage-Aware Multi-RIS Sensing and Optimization for mmWave Smart Radio Environments,” <em className="venue-mark conference-mark">IEEE Global Communications Conference (GLOBECOM)</em>, Macau, China, accepted, 2026. <span className="award">Oral presentation</span></>,
       <><strong>[C2]</strong> <a href="https://ieeexplore.ieee.org/document/11263604">Jaehyun Choi, Sehyun Ryu, Seungmin Choi, and Hyun Jong Yang*, “RT-AUGGAN: Robust Fingerprint Positioning under Environmental Variations via Ray Tracing-Assisted GAN Augmentation,” <em className="venue-mark conference-mark">IEEE International Conference on Consumer Electronics Asia (ICCE-Asia)</em>, Busan, Republic of Korea, pp. 1–6, 2025.</a></>,
       <><strong>[C1]</strong> <a href="https://ojs.aaai.org/index.php/AAAI/article/view/30506">Sehyun Ryu, Hosung Joo, Jonggyu Jang, and Hyun Jong Yang*, “Instance-Wise Laplace Mechanism via Deep Reinforcement Learning,” <em className="venue-mark aaai-mark">AAAI Conference on Artificial Intelligence (Student Abstract and Poster Program)</em>, Vancouver, Canada, 38(21), pp. 23640–23641, 2024.</a> <span className="award">Oral presentation</span></>,
