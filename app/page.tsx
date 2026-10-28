@@ -39,7 +39,7 @@ const publications = [
   {
     title: "Korean Domestic Papers",
     items: [
-      <><strong>[D6]</strong> Sehyun Ryu, Jaehyun Choi, and Hyun Jong Yang*, “Communication-Aware Multi-Agent Path Finding for Wi-Fi 6 Warehouse Robot Coordination,” <em className="venue-mark domestic-mark">Summer Conference of KICS</em>, Jeju Island, Republic of Korea, 2026.</>,
+      <><strong>[D6]</strong> Sehyun Ryu, Jaehyun Choi, and Hyun Jong Yang*, “Communication-Aware Multi-Agent Path Finding for Wi-Fi 6 Warehouse Robot Coordination,” <em className="venue-mark domestic-mark">Summer Conference of KICS</em>, Jeju Island, Republic of Korea, 2026. <span className="award">Best Paper Award</span></>,
       <><strong>[D5]</strong> Hyeonsu Lyu, Minwoo Kim, Sehyun Ryu, and Hyun Jong Yang*, “Towards Building a Ray-Tracing-Compatible Digital Twin Scene for Wireless-Aware Physical AI Systems,” <em className="venue-mark domestic-mark">JCCI</em>, Yeosu, Republic of Korea, 2026.</>,
       <><strong>[D4]</strong> <a href="https://www.dbpia.co.kr/pdf/pdfView.do?nodeId=NODE12738510&width=1280">Sehyun Ryu and Hyun Jong Yang*, “A Survey of the Application of Ray-Tracing-Based Channel Modeling for Digital Twin Environments,” <em className="venue-mark domestic-mark">Winter Conference of KICS</em>, Pyeongchang, Republic of Korea, 2026.</a></>,
       <><strong>[D3]</strong> <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11792297">Sehyun Ryu and Hyun Jong Yang*, “Trends in Utilizing Generative Models for Wireless Communications,” <em className="venue-mark domestic-mark">KICS Information and Communications Magazine</em>, 2024.</a></>,
@@ -282,7 +282,7 @@ export default function Home() {
           </div>
 
           <div className="subsection-heading"><h2>Honors &amp; Awards</h2></div>
-          <ul className="plain-list"><li><strong>Grand Prize</strong>, New Industry Sector Ideas and Patent Rights Competition, Korea Invention Promotion Association, 2024.</li><li><strong>Excellence Award</strong>, Undergraduate Group Research Program (UGRP), POSTECH, 2019.</li><li><strong>Jigok Scholarship</strong>, full tuition, POSTECH, Mar. 2018 – Feb. 2023.</li></ul>
+          <ul className="plain-list"><li><strong>Best Paper Award</strong>, KICS Summer Conference, The Korean Institute of Communications and Information Sciences (KICS), 2026.</li><li><strong>Grand Prize</strong>, New Industry Sector Ideas and Patent Rights Competition, Korea Invention Promotion Association, 2024.</li><li><strong>Excellence Award</strong>, Undergraduate Group Research Program (UGRP), POSTECH, 2019.</li><li><strong>Jigok Scholarship</strong>, full tuition, POSTECH, Mar. 2018 – Feb. 2023.</li></ul>
 
           <div className="subsection-heading"><h2>Research Projects</h2></div>
           <ul className="plain-list"><li><strong>Development of a 5G-A vRAN Research Platform</strong> · IITP · 12.8B KRW · Jun. 2024 – Dec. 2028.</li><li><strong>AI-Based CBF Overhead Reduction</strong> · Samsung Electronics (S.LSI) · 300M KRW · Feb. 2024 – Aug. 2024.</li><li><strong>Data processing methods and simulated signal generation for AI radar data analysis</strong> · ADD · 90M KRW · Oct. 2023 – Dec. 2024.</li></ul>
